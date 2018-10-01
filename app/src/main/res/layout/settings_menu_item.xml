@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/txtOrderDetailItemName"
+    android:background="@color/colorAccent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:padding="10dp"
+    android:text="RESET"
+    android:textColor="@color/text_color_primary"
+    android:textSize="@dimen/size_normal_text"
+    android:fontFamily="sans-serif"
+
+    />
+

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".view.PrinterSettingActivity"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_printer_setting">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_model"
+            android:textColor="@color/text_color_secondary"
+            style="@style/TextView.InputLabel"
+            />
+
+        <Spinner
+            android:id="@+id/spnPrinterModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/layConnectionType"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_connection_type"
+            android:textColor="@color/text_color_secondary"
+            style="@style/TextView.InputLabel"
+            />
+
+        <Spinner
+            android:id="@+id/spnConnectionType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/layConnectionInfo"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/lblConnectSpinner"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="@dimen/size_normal_text"
+            android:paddingTop="10dp"
+            android:layout_toLeftOf="@+id/btnTestPrint"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:selectAllOnFocus="true"
+            android:layout_gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_color_secondary"
+            android:textColorHint="@color/text_color_secondary"
+            android:gravity="end|center_vertical"
+            android:background="@drawable/editable_text_view_bg"
+            />
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:id="@+id/btnTestPrint"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="PRINT TEST"
+            android:layout_gravity="right"
+            android:background="@android:color/holo_purple"/>
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/layPrintingSize"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_printing_size"
+            android:textColor="@color/text_color_secondary"
+            style="@style/TextView.InputLabel"
+            />
+
+        <Spinner
+            android:id="@+id/spnPrintingSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            />
+
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:textColorHint="@color/text_color_secondary"
+        >
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/number_of_print"
+            android:inputType="number"
+            android:id="@+id/txtNoOfPrint"
+            android:textColor="@color/text_color_secondary" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="right">
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:layout_gravity="right"
+            android:background="@android:color/holo_blue_dark"/>
+
+    </LinearLayout>
+</LinearLayout>

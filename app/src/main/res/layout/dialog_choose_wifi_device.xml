@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="16dp"
+            android:text="@string/choose_wifi_device"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/text_color_primary"
+            android:textSize="@dimen/size_large_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp">
+
+
+            <LinearLayout
+                android:id="@+id/ll_dialog_choose_wifi_device_radio_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_selected_state_selector" />
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/et_dialog_choose_wifi_device_ip"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="@dimen/size_normal_text"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:hint="@string/input_ip"
+                android:digits="0123456789."
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:selectAllOnFocus="true"
+                android:layout_gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:textColor="@color/text_color_secondary"
+                android:textColorHint="@color/text_color_secondary"
+                android:maxLength="6"
+                android:gravity="end|center_vertical"
+                android:background="@drawable/editable_text_view_bg"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/et_dialog_choose_wifi_device_port"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="@dimen/size_normal_text"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:hint="@string/input_ip"
+                android:digits="0123456789."
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:selectAllOnFocus="true"
+                android:layout_gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:textColor="@color/text_color_secondary"
+                android:textColorHint="@color/text_color_secondary"
+                android:maxLength="6"
+                android:gravity="end|center_vertical"
+                android:background="@drawable/editable_text_view_bg"
+                />
+           <!-- <EditText
+                android:id="@+id/et_dialog_choose_wifi_device_ip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="@string/input_ip"
+                android:digits="0123456789."
+                android:padding="8dp"
+                android:textSize="@dimen/size_normal_text" />-->
+<!--
+            <EditText
+                android:id="@+id/et_dialog_choose_wifi_device_port"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/input_port"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textSize="@dimen/size_normal_text" />-->
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp">
+
+            <LinearLayout
+                android:id="@+id/ll_dialog_choose_wifi_device_radio_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/fl_dialog_choose_wifi_device_click_to_choose"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_selected_state_selector" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_dialog_choose_wifi_device_click_to_choose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ll_dialog_choose_wifi_device_radio_choose"
+                android:background="@drawable/editable_text_view_bg">
+
+                <TextView
+                    android:id="@+id/tv_dialog_choose_wifi_device_click_to_choose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/click_to_choose"
+                    android:textSize="@dimen/size_normal_text" />
+
+                <ProgressBar
+                    android:id="@+id/pb_dialog_choose_wifi_device_progress_bar"
+                    style="@android:style/Widget.ProgressBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <ListView
+                android:id="@+id/lv_dialog_choose_wifi_device_found_devices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp"
+                android:layout_below="@+id/fl_dialog_choose_wifi_device_click_to_choose"
+                android:layout_alignLeft="@+id/fl_dialog_choose_wifi_device_click_to_choose"
+                android:layout_alignRight="@+id/fl_dialog_choose_wifi_device_click_to_choose"/>
+
+            <TextView
+                android:id="@+id/tv_dialog_choose_wifi_device_found_devices_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/lv_dialog_choose_wifi_device_found_devices"
+                android:layout_alignRight="@id/lv_dialog_choose_wifi_device_found_devices"
+                android:layout_below="@id/lv_dialog_choose_wifi_device_found_devices"
+                android:padding="16dp"
+                android:gravity="center"
+                android:textColor="@color/text_color_secondary"
+                android:textSize="@dimen/size_small_text"
+                android:text="@string/tip_have_no_found_wifi_device"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+
+</LinearLayout>

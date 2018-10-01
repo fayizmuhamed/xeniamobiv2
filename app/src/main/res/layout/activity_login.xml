@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    tools:context="com.spidertechnosoft.app.xeniamobi_v2.view.LoginActivity">
+    <ImageButton
+        android:visibility="gone"
+        android:id="@+id/btnSync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_settings"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/login_container_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:keepScreenOn="true"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/heading_activity_login"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            android:textSize="@dimen/heading_activity_login"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/heading_activity_login" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sub_heading_activity_login"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textSize="@dimen/size_sub_heading_activity_login"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/heading_activity_login" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_login_sub_heading_bottom_margin"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_login_username"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/size_normal_text"
+                android:backgroundTint="@color/custom_edit_text_background_tint"
+                android:maxLines="1"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/activity_login_password"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/size_normal_text"
+                android:inputType="textPassword"
+                android:backgroundTint="@color/custom_edit_text_background_tint"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                />
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:text="@string/activity_login_forgot_password"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+                <!--android:textColor="@color/text_color_primary"-->
+                <!--android:paddingRight="3dp"-->
+                <!--android:fontFamily="sans-serif"-->
+                <!--android:textSize="@dimen/size_normal_text"-->
+                <!--android:layout_marginBottom="20dp"/>-->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:layout_gravity="center"
+                android:background="@drawable/login_button"
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

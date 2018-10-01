@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333333</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#F15C5C</color>
+
+    <color name="app_bar_bg">#20333333</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="heading_activity_login">#FFFFFF</color>
+    <color name="text_color_primary">#FFFFFF</color>
+    <color name="text_color_secondary">#000000</color>
+    <color name="footer_total_bg">#333333</color>
+    <color name="proceed_total_bg">#51A4E6</color>
+    <color name="add_cart_item_bg">#8CD790</color>
+    <color name="remove_cart_item_bg">#F15C5C</color>
+    <color name="add_new_order_bg">#8CD790</color>
+    <color name="print_order_bg">#51A4E6</color>
+    <color name="generate_bill_bg">#F15C5C</color>
+    <color name="remove_cart_item_disabled_bg">#cccccc</color>
+    <color name="sync_save_button">#8CD790</color>
+    <color name="textColorHint">#FFFFFF</color>
+
+
+    <!--Theme edit text-->
+    <color name="custom_edit_text_background_tint">#FFFFFF</color>
+    <color name="info_button_disabled_bg" >#cccccc</color>
+    <color name="info_button_pressed_bg" >#9951A4E6</color>
+    <color name="info_button_color">#51A4E6</color>
+    <color name="delete_button_bg">#F15C5C</color>
+    <color name="feedback_button_bg">#8CD790</color>
+    <color name="narration_button_bg">#8C5780</color>
+    <color name="staff_selection_item_inactive">#FFFFFF</color>
+    <color name="staff_selection_item_active">#e4d2d2</color>
+    <color name="order_details_table_head_bg">#51A4E6</color>
+    <color name="order_details_table_head_alternate_bg">#4893ce</color>
+    <color name="order_detail_item_pressed">#e4d2d2</color>
+    <color name="order_detail_item_normal">#FFFFFF</color>
+    <color name="my_orders_table_no_bg" >#51A4E6</color>
+    <color name="edit_button_bg">#333333</color>
+    <color name="narration_dialog_bg" >#4893ce</color>
+    <color name="empty_image_bg" >#4893ce</color>
+    <color name="pending_order_item_normal">#ffffff</color>
+    <color name="pending_order_item_pressed">#e4d2d2</color>
+    <color name="retry_button">#F15C5C</color>
+    <color name="edit_cart_item_bg">#333333</color>
+    <color name="edit_cart_item_disabled_bg">#cccccc</color>
+    <color name="lighter_gray">#ddd</color>
+    <color name="refresh_button_pressed_bg">#998CD790</color>
+    <color name="refresh_button_disabled_bg">#cccccc</color>
+    <color name="refresh_button_color">#8CD790</color>
+    <color name="danger_button_disabled_bg">#cccccc</color>
+    <color name="danger_button_color">#c41230</color>
+    <color name="danger_button_pressed_bg">#99c41230</color>
+    <color name="close_button_pressed_bg">#99333333</color>
+    <color name="close_button_disabled_bg">#cccccc</color>
+    <color name="close_button_color">#333333</color>
+    <color name="green_button_color">#40c412</color>
+    <color name="green_button_disabled_bg">#cccccc</color>
+    <color name="green_button_pressed_bg">#9940c412</color>
+    <color name="active_category_color">#8CD790</color>
+    <color name="inactive_category_color">#333333</color>
+    <color name="on_board_sale_cart_content_item_delete_bg">#1AA2231D</color>
+    <color name="on_board_sale_cart_content_item_delete_boarder">#cccccc</color>
+    <color name="bottom_gray_border">#cccccc</color>
+</resources>

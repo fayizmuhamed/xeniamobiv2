@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/footer_height"
+    tools:context="com.spidertechnosoft.app.xeniamobi_v2.view.ProductFragment"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:background="@drawable/category_top_bg"
+        android:paddingTop="?attr/actionBarSize">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+           >
+            <EditText
+                android:id="@+id/editProductSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:hint="@string/activity_product_select_search"
+                android:fontFamily="sans-serif"
+                android:backgroundTint="@color/custom_edit_text_background_tint"
+                android:textSize="@dimen/size_normal_text"
+                android:drawableRight="@drawable/ic_search" />
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabCategory"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/category_tab_height"
+                app:tabGravity="fill"
+                app:tabTextColor="@drawable/category_button_text_color"
+                app:tabBackground="@drawable/category_button"
+                app:tabTextAppearance="@style/CustomTextStyle"
+                app:tabMode="scrollable"
+                android:layout_margin="5dp"
+                android:clipToPadding="false"
+                app:tabPaddingStart="10dp"
+                app:tabPaddingEnd="10dp"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabIndicatorHeight="0dp">
+
+            </android.support.design.widget.TabLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+    <ListView
+        android:id="@+id/lvProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        android:paddingLeft="@dimen/normal_screen_padding_left"
+        android:paddingRight="@dimen/normal_screen_padding_right"
+        android:paddingTop="@dimen/normal_screen_padding_top"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/layProductSelectionFooter"
+        >
+
+    </ListView>
+
+
+</LinearLayout>

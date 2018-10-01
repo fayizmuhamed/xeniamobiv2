@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/text_color_primary"
+    android:elevation="4dp">
+    <ImageView
+        android:id="@+id/imgUserImage"
+        android:layout_width="@dimen/product_list_item_height"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:maxHeight="70dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:background="@drawable/product_line_item_image_bg"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/imgUserImage">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/product_list_item_actions">
+            <TextView
+                android:id="@+id/lblUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_secondary"
+                android:textSize="@dimen/size_normal_text"
+                android:fontFamily="sans-serif"
+                android:text="Test User"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/lblUserType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_secondary"
+                android:textSize="@dimen/size_normal_text"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:text="Admin"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/user_list_item_actions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true">
+            <ImageButton
+                android:id="@+id/btnUserEdit"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_edit"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/black"/>
+
+            <ImageButton
+                android:id="@+id/btnUserDelete"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_delete"
+                android:background="@android:color/holo_red_light"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+

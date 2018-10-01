@@ -1,0 +1,220 @@
+<resources>
+    <string name="app_name">XeniaMobi</string>
+
+    <string name="title_activity_login">XeniaMobi</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="heading_activity_login">WELCOME</string>
+    <string name="sub_heading_activity_login">Sign in to continue...</string>
+    <string name="activity_login_forgot_password">Forgot Password</string>
+    <string name="activity_login_username">Username</string>
+    <string name="activity_login_password">Password</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_feedback_send">Save</string>
+
+    <string name="title_activity_table_selection">Select Table</string>
+    <string name="table_selection_button_label">TABLE</string>
+    <string name="title_activity_order_type">Select Order Type</string>
+    <string name="title_activity_product_selection">Select Category</string>
+    <string name="title_activity_staff_selection">Select Staff</string>
+    <string name="activity_product_select_search">Search</string>
+    <string name="label_total">Total :</string>
+    <string name="proceed_to_pay_label">PROCEED TO PAY</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="product_details_description_label">Description</string>
+    <string name="title_activity_product_details">Product Details</string>
+    <string name="title_activity_order">Order</string>
+    <string name="title_activity_order_details">Order Details</string>
+    <string name="save_button_label">SAVE</string>
+    <string name="order_details_kot_no_label">KOT NO</string>
+    <string name="order_details_table_label">TABLE</string>
+    <string name="order_details_date_label">DATE</string>
+    <string name="order_details_pax_label">PAX</string>
+    <string name="order_details_table_item_code">Item Code</string>
+    <string name="order_details_table_item_qty">Qty</string>
+    <string name="order_details_table_item_rate">Rate</string>
+    <string name="order_details_table_item_amount">Total</string>
+    <string name="title_activity_pending_orders">Pending Orders</string>
+    <string name="title_activity_printing">Printing</string>
+    <string name="title_activity_sync">Data Sync</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ic_menu_logout">Logout</string>
+    <string name="button_login">SIGN IN</string>
+    <string name="title_activity_place_order">Place Order</string>
+    <string name="add_new_order">ADD NEW ORDER</string>
+    <string name="add_cart_item">ADD ITEM</string>
+    <string name="narration_cart_item">NARRATION</string>
+    <string name="remove_cart_item">DELETE ITEM</string>
+    <string name="print_order">PRINT</string>
+    <string name="narration_dialog_title">Narration</string>
+    <string name="title_activity_narration">Narration</string>
+    <string name="title_activity_feedback">Feedback</string>
+    <string name="sync_retry_button">Retry</string>
+    <string name="sync_save_button_label">SYNC</string>
+    <string name="action_reset">RESET</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="title_activity_item_list">Item Settings</string>
+    <string name="title_activity_add_item">Add New Item</string>
+    <string name="title_activity_add_category">Add Category</string>
+    <string name="title_activity_bill_creation">Bill</string>
+    <string name="title_fragment_bill_details">Bill Details</string>
+    <string name="title_fragment_cash_desk">Desk</string>
+    <string name="generate_bill">Generate Bill</string>
+    <string name="order_details_table_item_tax">Tax</string>
+    <string name="title_activity_sales_report">Sales Report</string>
+    <string name="action_print">Print</string>
+    <string name="order_details_customer_label">Customer</string>
+    <string name="edit_cart_item">EDIT ITEM</string>
+    <string name="label_total_tax">Tax :</string>
+    <string name="proceed_label">PROCEED</string>
+    <string name="label_balance">Balance</string>
+    <string name="title_activity_user_list">Users</string>
+    <string name="title_activity_user">User</string>
+    <string name="satff_auth_title">Authentication</string>
+    <string name="lbl_staff_name">Staff Name : </string>
+    <string name="title_activity_report">Reports</string>
+    <string name="title_activity_item_summary">Item Summary</string>
+    <string name="title_activity_category_summary">Category Summary</string>
+    <string name="title_activity_staff_summary">Waiter Summary</string>
+    <string name="title_activity_daily_summary">Daily Summary</string>
+    <string name="label_no_of_sale">No Of Sale :</string>
+    <string name="title_activity_sale_summary">Sale Summary</string>
+    <string name="ic_menu_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="action_save">SAVE</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_activity_point_of_sale">POS</string>
+    <string name="label_invoice_no">INVOICE</string>
+    <string name="label_invoice_date">DATE</string>
+    <string name="label_mode_of_payment">MOP</string>
+    <string name="label_tax">TAX</string>
+    <string name="label_scan_barcode">---SCAN BARCODE HERE---</string>
+    <string name="label_print">PRINT</string>
+    <string name="label_refresh">REFRESH</string>
+    <string name="label_delete">DELETE</string>
+    <string name="label_close">CLOSE</string>
+    <string name="label_save">SAVE</string>
+    <string name="label_salesman">STAFF</string>
+    <string name="payment_point_of_sale_title">Cash Desk</string>
+    <string name="lbl_payment_details">Payment Details</string>
+    <string name="total_tax">TAX</string>
+    <string name="net_value">NET</string>
+    <string name="discount">DISC</string>
+    <string name="round_off">ROUND OFF</string>
+    <string name="bill_total">BILL TOTAL</string>
+    <string name="select_model">Select Model</string>
+    <string name="title_activity_printer_settings">Printer Settings</string>
+    <string name="btn_printer_setting">Printer Settings</string>
+    <string name="select_connection_type">Select Connection Type</string>
+    <string name="select_printing_size">Select Printing Size</string>
+    <string name="number_of_print">Number Of Print</string>
+    <string name="choose_bluetooth_device">Opt Bluetooth Device</string>
+    <string name="paired_devices">Paired Devices</string>
+    <string name="tip_have_no_paired_device">Is Paired Device？</string>
+    <string name="search_device">Search Devices</string>
+    <string name="tip_have_no_found_bluetooth_device">No Found BT Devices</string>
+    <string name="print_device">Device</string>
+    <string name="choose_usb_device">Opt USB Device</string>
+    <string name="tip_insert_usb_device">Please Insert USB Device</string>
+    <string name="device_does_not_support_bluetooth">Don\\\'t Support BT</string>
+    <string name="choose_wifi_device">Opt WIFI Device</string>
+    <string name="input_ip">Input IP</string>
+    <string name="input_port">Input Port</string>
+    <string name="click_to_choose">Click To Choose</string>
+    <string name="tip_have_no_found_wifi_device">No Found Wifi Devices</string>
+    <string name="confirm">Confirm</string>
+</resources>

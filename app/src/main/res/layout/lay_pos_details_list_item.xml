@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/order_detail_item_bg"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+    <TextView
+        android:id="@+id/txtOrderDetailItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".4"
+        android:textColor="@color/text_color_secondary"
+        android:text="@string/order_details_table_item_code"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/size_normal_text"
+        android:fontFamily="sans-serif"
+
+        />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".3"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/btnProductReduceFromCart"
+            android:layout_width="@dimen/reduce_icon_size"
+            android:layout_height="@dimen/reduce_icon_size"
+            android:scaleType="fitXY"
+            android:background="@drawable/ic_minus"
+            />
+
+        <TextView
+            android:id="@+id/txtOrderDetailItemQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/text_color_secondary"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_medium_text"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif"
+
+            />
+        <ImageView
+            android:id="@+id/btnProductAddToCart"
+            android:layout_width="@dimen/add_icon_size"
+            android:layout_height="@dimen/add_icon_size"
+            android:scaleType="fitXY"
+            android:background="@drawable/ic_plus"
+            />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/txtOrderDetailItemRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".2"
+        android:text="@string/order_details_table_item_rate"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:lines="1"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/text_color_secondary"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_normal_text"
+        android:fontFamily="sans-serif"
+        android:background="@drawable/editable_text_view_bg"/>
+
+
+    <TextView
+        android:id="@+id/txtOrderDetailItemAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".2"
+        android:text="@string/order_details_table_item_amount"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/text_color_secondary"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/size_normal_text"
+        android:fontFamily="sans-serif"
+        tools:ignore="RtlCompat"
+        />
+</LinearLayout>
+

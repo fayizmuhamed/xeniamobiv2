@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/text_color_primary"
+    android:elevation="4dp">
+    <ImageView
+        android:id="@+id/imgProductImage"
+        android:layout_width="@dimen/product_list_item_height"
+        android:layout_height="wrap_content"
+        android:maxHeight="70dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:background="@drawable/product_line_item_image_bg"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/imgProductImage">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/product_list_item_actions">
+            <TextView
+                android:id="@+id/lblProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_secondary"
+                android:textSize="@dimen/size_normal_text"
+                android:fontFamily="sans-serif"
+                android:text="Nut Butter, Banana, and Chia Seed Toast"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/lblProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_secondary"
+                android:textSize="@dimen/size_normal_text"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:text="800 INR"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/product_list_item_actions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:id="@+id/btnProductReduceFromCart"
+                android:layout_width="@dimen/reduce_icon_size"
+                android:layout_height="@dimen/reduce_icon_size"
+                android:scaleType="fitXY"
+                android:background="@drawable/ic_minus"/>
+
+            <EditText
+                android:id="@+id/lblProductOrderedQty"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/text_color_secondary"
+                android:textSize="@dimen/size_medium_text"
+                android:focusable="false"
+                android:ems="2"
+                android:textAlignment="center"
+                android:background="@drawable/editable_text_view_bg"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:selectAllOnFocus="true"
+                android:text="1"/>
+            <ImageView
+                android:id="@+id/btnProductAddToCart"
+                android:layout_width="@dimen/add_icon_size"
+                android:layout_height="@dimen/add_icon_size"
+                android:scaleType="fitXY"
+                android:background="@drawable/ic_plus"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+

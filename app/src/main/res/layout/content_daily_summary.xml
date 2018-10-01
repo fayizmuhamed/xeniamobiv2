@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".view.DailySummaryActivity"
+    tools:showIn="@layout/activity_daily_summary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:id="@+id/laySaleSummaryHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/background_light"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/normal_screen_padding_right"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/txtFromDateTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/btnFromDatePicker"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif"
+                    android:hint="From Date Time"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/text_color_secondary"
+                    android:textColorHint="@color/text_color_secondary"
+                    android:textSize="@dimen/size_normal_text" />
+
+                <EditText
+                    android:id="@+id/txtToDateTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/btnToDatePicker"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif"
+                    android:hint="To Date Time"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/text_color_secondary"
+                    android:textColorHint="@color/text_color_secondary"
+                    android:textSize="@dimen/size_normal_text" />
+                <!-- <Button
+                     android:id="@+id/btnFromDatePicker"
+                     android:layout_width="wrap_content"
+                     android:layout_height="40dp"
+                     android:textAllCaps="true"
+                     android:text="Picker"
+                     android:textColor="@color/text_color_secondary"
+                     android:textSize="@dimen/size_normal_text"
+                     android:fontFamily="sans-serif"
+                     android:layout_centerVertical="true"
+                     android:layout_alignParentRight="true"
+                     />-->
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="sans-serif"
+                    android:text="Search"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/size_normal_text" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/laySaleSummaryHeader">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/background_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                android:paddingVertical="@dimen/normal_screen_padding_top">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="Total No of Sales"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryNoOfSales"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorAccent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="Cash Transaction"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryCashTransactions"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="Card Transaction"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryCardTransactions"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="Credit Transaction"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryCreditTransactions"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="Mixed Transactions"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryMixedTransactions"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorAccent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="Total Amount"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryTotalAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/layDailySummaryTaxVAT"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="VAT"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryTaxVAT"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/layDailySummaryTaxSGST"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryTaxSGSTTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="SGST"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryTaxSGST"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/layDailySummaryTaxCGST"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="CGST"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryTaxCGST"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="Gross Amount"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryGrossAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="Bill Discount"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryBillDiscount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="Round Off"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryRoundOff"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="Net Amount"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryNetAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorAccent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="Cash Received"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryCashReceived"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="Card Received"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text" />
+
+                    <TextView
+                        android:id="@+id/lblDailySummaryCardReceived"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:ems="6"
+                        android:gravity="end"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:text="1000.00"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/text_color_secondary"
+                        android:textSize="@dimen/size_normal_text"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

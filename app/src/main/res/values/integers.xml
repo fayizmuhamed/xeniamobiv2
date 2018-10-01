@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="activity_table_selection_num_of_column">3</integer>
+    <integer name="order_delete_button_width">150</integer>
+    <integer name="activity_pos_no_of_items_column">4</integer>
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".view.SettingsActivity"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_settings">
+    <Button
+        android:id="@+id/btnPrinterSetting"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_printer_setting"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/holo_blue_dark"/>
+    <Switch
+        android:id="@+id/swStaffSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Staff Selection"
+        android:layout_marginBottom="10dp"/>
+    <Switch
+        android:id="@+id/swStaffAuthentication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Staff Authentication"
+        android:layout_marginBottom="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tax Type : "
+            android:textAllCaps="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="@dimen/size_normal_text"
+            android:fontFamily="sans-serif"
+            android:layout_centerVertical="true"
+            />
+        <Spinner
+            android:id="@+id/spnTaxTypes"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layLocationType"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location Type : "
+            android:textAllCaps="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="@dimen/size_normal_text"
+            android:fontFamily="sans-serif"
+            android:layout_centerVertical="true"
+            />
+        <Spinner
+            android:id="@+id/spnLocationTypes"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+  <!--  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device Type : "
+            android:textAllCaps="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="@dimen/size_normal_text"
+            android:fontFamily="sans-serif"
+            android:layout_centerVertical="true"
+            />
+        <Spinner
+            android:id="@+id/spnDeviceTypes"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="right">
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:layout_gravity="right"
+            android:background="@android:color/holo_blue_dark"/>
+
+    </LinearLayout>
+</LinearLayout>

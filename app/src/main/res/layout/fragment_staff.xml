@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize"
+    android:paddingBottom="@dimen/footer_height"
+
+    tools:context=".view.StaffFragment">
+
+    <GridView
+        android:id="@+id/gvStaff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:horizontalSpacing="5dp"
+        android:background="@android:color/transparent"
+        android:numColumns="3"
+        android:choiceMode="singleChoice"
+        android:drawSelectorOnTop="true"
+        android:gravity="center"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"
+        android:focusable="true"
+        android:clickable="true"
+        />
+
+</RelativeLayout>
