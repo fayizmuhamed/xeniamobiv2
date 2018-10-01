@@ -6,8 +6,8 @@ android {
         applicationId "com.spidertechnosoft.app.xeniamobi_v2"
         minSdkVersion 16
         targetSdkVersion 27
-        versionCode 8
-        versionName "1.1.7"
+        versionCode 9
+        versionName "1.1.8"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
             moduleName "xenia-mobi-v2"

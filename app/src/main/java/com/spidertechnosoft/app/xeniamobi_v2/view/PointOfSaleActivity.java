@@ -9,6 +9,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
 import android.support.design.widget.TabLayout;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -454,6 +455,14 @@ public class PointOfSaleActivity extends AppCompatActivity implements CartOperat
             }
         });
 
+        btnPOSRefresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //mDatabase.clearCart();
+                mSale=new Sale();
+                initializeData();
+            }
+        });
 
         btnPOSPrint.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1602,6 +1611,12 @@ public class PointOfSaleActivity extends AppCompatActivity implements CartOperat
 
         TextView txtCounterDeskBillTotal=(TextView)dlgPaymentPointOfSale.findViewById(R.id.txtCounterDeskBillTotal);
 
+        TextInputLayout tilCounterDeskCashReceived=(TextInputLayout)dlgPaymentPointOfSale.findViewById(R.id.tilCounterDeskCashReceived);
+
+        TextInputLayout tilCounterDeskCardReceived=(TextInputLayout)dlgPaymentPointOfSale.findViewById(R.id.tilCounterDeskCardReceived);
+
+        TextInputLayout tilCounterDeskChange=(TextInputLayout)dlgPaymentPointOfSale.findViewById(R.id.tilCounterDeskChange);
+
         final EditText txtCounterDeskCashReceived=(EditText) dlgPaymentPointOfSale.findViewById(R.id.txtCounterDeskCashReceived);
 
         final EditText txtCounterDeskCardReceived=(EditText) dlgPaymentPointOfSale.findViewById(R.id.txtCounterDeskCardReceived);
@@ -1747,14 +1762,17 @@ public class PointOfSaleActivity extends AppCompatActivity implements CartOperat
         });
 
         if(paymentType.equals(PaymentType.CASH)) {
-            txtCounterDeskCashReceived.setVisibility(View.VISIBLE);
-            txtCounterDeskCardReceived.setVisibility(View.GONE);
+            tilCounterDeskCashReceived.setVisibility(View.VISIBLE);
+            tilCounterDeskCardReceived.setVisibility(View.GONE);
+            tilCounterDeskChange.setVisibility(View.VISIBLE);
         }else if(paymentType.equals(PaymentType.BOTH)) {
-            txtCounterDeskCashReceived.setVisibility(View.VISIBLE);
-            txtCounterDeskCardReceived.setVisibility(View.VISIBLE);
+            tilCounterDeskCashReceived.setVisibility(View.VISIBLE);
+            tilCounterDeskCardReceived.setVisibility(View.VISIBLE);
+            tilCounterDeskChange.setVisibility(View.VISIBLE);
         }else{
-            txtCounterDeskCashReceived.setVisibility(View.GONE);
-            txtCounterDeskCardReceived.setVisibility(View.GONE);
+            tilCounterDeskCashReceived.setVisibility(View.GONE);
+            tilCounterDeskCardReceived.setVisibility(View.GONE);
+            tilCounterDeskChange.setVisibility(View.GONE);
         }
 
         if(SettingService.isStaffAuthenticationRequired().equals(IndicatorStatus.YES)) {
